@@ -210,6 +210,12 @@ const certifications = [
     title: "AWS APAC Solutions Architecture",
     issuer: "Forage",
   },
+  {
+    imagePath: "/images/javas.png",
+    issuerImgPath: "/images/javas.png",
+    title: "Javascript Certificate",
+    issuer: "Hackrank",
+  },
   // ... add as many more as you like
 ];
 
