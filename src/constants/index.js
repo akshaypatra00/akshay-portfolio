@@ -212,7 +212,7 @@ const certifications = [
   },
   {
     imagePath: "/images/javas.png",
-    issuerImgPath: "/images/javas.png",
+    issuerImgPath: "/images/hackr.png",
     title: "Javascript Certificate",
     issuer: "Hackrank",
   },
