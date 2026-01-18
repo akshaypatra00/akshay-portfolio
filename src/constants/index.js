@@ -216,6 +216,12 @@ const certifications = [
     title: "Javascript Certificate",
     issuer: "Hackrank",
   },
+  {
+    imagePath: "/images/ai.png",
+    issuerImgPath: "/images/up.png",
+    title: "Introduction to Generative AI Certificate",
+    issuer: "Upgrad",
+  },
   // ... add as many more as you like
 ];
 
