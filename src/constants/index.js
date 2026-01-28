@@ -44,6 +44,24 @@ const abilities = [
 // --- Removed 'export' from here ---
 // constants.js
  const projects = [
+   {
+    id: 4,
+    title: "Medicine Analyser App",
+    des: "A production-ready Flutter mobile application designed to help people understand medicines and health conditions in a clear, structured, and responsible way.",
+    img: "/images/medi.png",
+    iconLists: [
+      "/images/dart.svg",
+      "/images/flutter.svg",
+      "/images/ml.png",
+      "/images/git.svg",
+      "/images/river.png",
+       "/images/groq.png",
+    ],
+    github: "https://github.com/akshaypatra00/medicine-analyzer-flutter",
+    type: "development",
+  },
+
+   
   {
     id: 1,
     title: "Famity App",
