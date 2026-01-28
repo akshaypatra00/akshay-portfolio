@@ -45,7 +45,7 @@ const abilities = [
 // constants.js
  const projects = [
    {
-    id: 4,
+    id: 1,
     title: "Medicine Analyser App",
     des: "A production-ready Flutter mobile application designed to help people understand medicines and health conditions in a clear, structured, and responsible way.",
     img: "/images/medi.png",
