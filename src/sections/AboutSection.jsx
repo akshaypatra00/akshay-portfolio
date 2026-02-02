@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Button from "../components/Button"; // ✅ Uses your existing Button
+import Button from "../components/Button"; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,14 +44,14 @@ const AboutSection = () => {
       >
         <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-[0_0_40px_#BFD8FF]">
           <img
-            src="/images/finalprofile.jpg" // 🔁 Replace with your actual image
+            src="/images/finalprofile.jpg"
             alt="Profile"
             className="w-full h-full object-cover"
           />
         </div>
       </div>
 
-      {/* 📝 Text Section */}
+      
       <div ref={textRef} className="w-full md:w-1/2 space-y-5 text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-[#D9ECFF] border-b-2 border-[#D9ECFF] inline-block pb-2">
           About Me
@@ -74,13 +74,11 @@ const AboutSection = () => {
 
         </p>
 
-        {/* ✅ Smaller, left-aligned button */}
         <div className="mt-4 flex md:justify-start justify-center">
           <Button
             text="Download CV"
             className="md:w-70 md:h-8 w-60 h-9 text-sm"
-            // --- ADDED THIS PROP ---
-            // This file must be in your /public folder
+            
             downloadUrl="/Akshay_Patra_resume.pdf"
           />
         </div>
