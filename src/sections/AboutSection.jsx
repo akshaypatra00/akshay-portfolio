@@ -81,7 +81,7 @@ const AboutSection = () => {
             className="md:w-70 md:h-8 w-60 h-9 text-sm"
             // --- ADDED THIS PROP ---
             // This file must be in your /public folder
-            downloadUrl="/Akshay_resume.pdf"
+            downloadUrl="/Akshay_Patra_resume.pdf"
           />
         </div>
       </div>
