@@ -190,7 +190,7 @@ const expCards = [
     imgPath: "/images/reallogo.png",
     logoPath: "/images/reallogo.png",
     title: "Customer Support Associate (Technical Support)",
-    date: "June 2025 - Present",
+    date: "June 2025 - Oct 2025",
     responsibilities: [
       "Assisted users with technical troubleshooting and guided them through product features.",
       "Collaborated with the dev team to report and document bugs for future updates.",
