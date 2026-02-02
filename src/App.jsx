@@ -1,31 +1,39 @@
-import Testimonials from "./sections/Certifications";
-import Footer from "./sections/Footer";
-import Contact from "./sections/Contact";
-import TechStack from "./sections/TechStack";
-import Experience from "./sections/Experience";
-import Hero from "./sections/Hero";
-import ShowcaseSection from "./sections/AboutSection";
-import FeatureCards from "./sections/FeatureCards";
+import { memo, lazy, Suspense } from "react";
 import Navbar from "./components/NavBar";
+import Hero from "./sections/Hero";
 import AboutSection from "./sections/AboutSection";
-import CanvasRevealEffect from "./components/CanvasRevealEffect";
-import { PinContainer } from "./components/ui/pin";
+import FeatureCards from "./sections/FeatureCards";
 import RecentProjects from "./components/RecentProjects";
+import Experience from "./sections/Experience";
+import TechStack from "./sections/TechStack";
+import Testimonials from "./sections/Certifications";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 
-const App = () => (
+const LazyTestimonials = lazy(() => import("./sections/Certifications"));
+
+const AppContent = () => (
   <>
     <Navbar />
     <Hero />
     <AboutSection />
     <FeatureCards />
-    <RecentProjects/>
+    <RecentProjects />
     <Experience />
     <TechStack />
-    <Testimonials />
+    <Suspense fallback={<div className="h-64" />}>
+      <Testimonials />
+    </Suspense>
     <Contact />
     <Footer />
   </>
 );
+
+const App = memo(() => (
+  <AppContent />
+));
+
+App.displayName = "App";
 
 export default App;
