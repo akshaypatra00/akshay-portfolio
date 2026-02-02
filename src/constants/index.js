@@ -59,6 +59,21 @@ const abilities = [
     ],
     github: "https://github.com/akshaypatra00/medicine-analyzer-flutter",
     type: "development",
+     problem: "Medical information online is often confusing, unstructured, or misleading. Users struggle to understand medicines safely without falling into misinformation or self-prescription risks.",
+      solution: "Built a trust-focused mobile application that uses AI to explain medicines and health conditions in neutral, educational language. The app enforces strict safety rules, structured JSON responses, and clear disclaimers to ensure responsible usage without replacing professional medical advice.",
+      features: [
+    "Search medicines by name with structured AI explanations",
+    "Scan medicine using camera with OCR extraction",
+    "Upload medicine images from gallery",
+    "Manual correction support for OCR results",
+    "AI-powered medicine analysis with categorized sections",
+    "Health condition guidance with food and lifestyle recommendations",
+    "Glassmorphism UI with soft gradients and dark mode",
+    "Search history and local storage support",
+    "Clear medical disclaimers and safety-focused UX"
+  ],
+  metrics: "Supports 10+ structured medical categories per analysis, OCR accuracy improved with manual correction flow, 100% non-prescriptive AI responses enforced via prompt design",
+  liveDemo: ""
   },
 
    
