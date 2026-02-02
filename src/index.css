@@ -15,8 +15,37 @@ body {
   font-family: "Mona Sans", sans-serif;
 }
 
+/* Optimize animations with hardware acceleration */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 section {
   width: 100dvw;
+}
+
+/* Smooth section transitions */
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @theme {
@@ -104,6 +133,7 @@ section {
 
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
+    will-change: background-color, transform;
 
     &.scrolled {
       @apply top-0 bg-black;
@@ -208,24 +238,30 @@ section {
 
   .cta-button {
     @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    will-change: transform;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
         w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
         rounded-full bg-white-50 transition-all duration-500;
+      will-change: width, height, right;
     }
 
     .text {
       @apply uppercase md:text-lg text-black transition-all duration-500
         group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+      will-change: transform, color;
     }
 
     .arrow-wrapper {
       @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
         -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      will-change: background-color;
 
       img {
         @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+        will-change: transform;
       }
     }
   }
@@ -260,10 +296,12 @@ section {
 
   .tech-card-animated-bg {
     @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+    will-change: transform;
   }
 
   .tech-card-content {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
+    will-change: transform;
 
     & p {
       @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
@@ -313,6 +351,8 @@ section {
 
       .icon {
         @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-xl size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-black-50;
+        will-change: background-color, transform;
+        transform: translateZ(0);
       }
 
       img {
@@ -327,12 +367,14 @@ section {
   display: inline-block;
   flex-direction: column;
   transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+  will-change: transform;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+  will-change: transform;
 }
 
 @keyframes wordSlider {
