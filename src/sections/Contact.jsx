@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, memo, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
@@ -12,12 +12,12 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = useCallback((e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     setLoading(true); // Show loading state
 
@@ -36,7 +36,7 @@ const Contact = () => {
     } finally {
       setLoading(false); // Always stop loading, even on error
     }
-  };
+  }, []);
 
   return (
     <section id="contact" className="flex-center section-padding">
@@ -112,4 +112,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);
