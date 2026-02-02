@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
 import { FaLocationArrow, FaX } from "react-icons/fa6";
 import { projects } from "../constants";
 
@@ -262,4 +262,4 @@ const RecentProjects = () => {
   );
 };
 
-export default RecentProjects;
+export default memo(RecentProjects);
