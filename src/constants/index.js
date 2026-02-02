@@ -1,16 +1,14 @@
-// constants/index.js
-
 // ==================== NAV LINKS ====================
-export const navLinks = [
+const navLinks = [
   { name: "About", link: "#about" },
-  { name: "Project", link: "#work" },
+   { name: "Project", link: "#work" },
   { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#skills" },
   { name: "Certification", link: "#certifications" },
 ];
 
 // ==================== WORDS ====================
-export const words = [
+const words = [
   { text: "Ideas", imgPath: "/images/ideas.svg" },
   { text: "Concepts", imgPath: "/images/concepts.svg" },
   { text: "Designs", imgPath: "/images/designs.svg" },
@@ -21,8 +19,11 @@ export const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
+// ==================== COMPANY LOGOS ====================
+
+
 // ==================== ABILITIES ====================
-export const abilities = [
+const abilities = [
   {
     phase: "Phase 1",
     title: "Planning & Strategy",
@@ -40,8 +41,27 @@ export const abilities = [
   },
 ];
 
-// ==================== PROJECTS ====================
-export const projects = [
+// --- Removed 'export' from here ---
+// constants.js
+ const projects = [
+   {
+    id: 1,
+    title: "Medicine Analyser App",
+    des: "A production-ready Flutter mobile application designed to help people understand medicines and health conditions in a clear, structured, and responsible way.",
+    img: "/images/medi.png",
+    iconLists: [
+      "/images/dart.svg",
+      "/images/flutter.svg",
+      "/images/ml.png",
+      "/images/git.svg",
+      "/images/river.png",
+       "/images/groq.png",
+    ],
+    github: "https://github.com/akshaypatra00/medicine-analyzer-flutter",
+    type: "development",
+  },
+
+   
   {
     id: 1,
     title: "Famity App",
@@ -113,99 +133,121 @@ export const projects = [
   },
 ];
 
+
 // ==================== TECH STACK ====================
-export const techStackImgs = [
-  { name: "Flutter Developer", imgPath: "/images/logos/flutter.png" },
-  { name: "Figma Designer", imgPath: "/images/logos/figma.png" },
-  { name: "Supabase Developer", imgPath: "/images/logos/supabase.png" },
+// Keep techStackImgs if you use it elsewhere, otherwise you can remove it
+const techStackImgs = [
+  // { name: "React Developer", imgPath: "/images/logos/react.png" }, // Removed
+  { name: "Flutter Developer", imgPath: "/images/logos/flutter.png" }, // Added Flutter img placeholder
+  { name: "Figma Designer", imgPath: "/images/logos/figma.png" }, // Added Figma img placeholder
+  { name: "Supabase Developer", imgPath: "/images/logos/supabase.png" }, // Added Supabase img placeholder
   { name: "Python Developer", imgPath: "/images/logos/python.svg" },
   { name: "Git", imgPath: "/images/logos/git.svg" },
+  // { name: "Project Manager", imgPath: "/images/logos/git.svg" }, // Removed
 ];
 
-export const techStackIcons = [
+// --- MODIFIED THIS ARRAY ---
+const techStackIcons = [
   {
     name: "Flutter",
+    // ⚠️ REPLACE with your actual Flutter .glb file path
     modelPath: "/models/Flutter.glb",
-    scale: 26,
-    rotation: [0, 0, 0],
+    scale: 26, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
   {
-    name: "Python",
+    name: "Python", // Keeping Python
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
     name: "Figma",
-    modelPath: "/models/figma.glb",
-    scale: 1.5,
-    rotation: [Math.PI / 2, 0, 0],
+    modelPath: "/models/figma.glb", // Make sure this is your actual path
+    scale: 1.5, // Adjust as needed
+    // --- TRY ADJUSTING THIS ---
+    // Tilt it slightly on the X-axis (e.g., 15-30 degrees)
+    rotation: [Math.PI / 2, 0, 0], // Try values like Math.PI / 12 or Math.PI / 6
+    // --- --------------------
   },
   {
-    name: "Git",
+    name: "Git", // Keeping Three.js/Interactive
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, 0.05, 0],
   },
   {
     name: "Supabase",
+    // ⚠️ REPLACE with your actual Supabase .glb file path
     modelPath: "/models/supabase.glb",
-    scale: 0.04,
-    rotation: [0, 0, 0],
+    scale: 0.04, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
+  // Removed React, Node.js (Backend), Git (Project Manager)
   {
     name: "React",
+    // ⚠️ REPLACE with your actual Supabase .glb file path
     modelPath: "/models/react2.glb",
-    scale: 0.04,
-    rotation: [0, 0, 0],
+    scale: 0.04, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
   {
     name: "Node.js",
+    // ⚠️ REPLACE with your actual Supabase .glb file path
     modelPath: "/models/nodejs.glb",
-    scale: 0.04,
-    rotation: [0, 0, 0],
+    scale: 0.04, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
   {
     name: "Mongodb",
+    // ⚠️ REPLACE with your actual Supabase .glb file path
     modelPath: "/models/mongodb.glb",
-    scale: 0.04,
-    rotation: [0, 0, 0],
+    scale: 0.04, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
   {
     name: "Javascript",
+    // ⚠️ REPLACE with your actual Supabase .glb file path
     modelPath: "/models/javascript.glb",
-    scale: 0.04,
-    rotation: [0, 0, 0],
+    scale: 0.04, // Adjust as needed
+    rotation: [0, 0, 0], // Adjust as needed
   },
+  
+  
 ];
 
+
 // ==================== EXPERIENCE ====================
-export const expCards = [
+const expCards = [
   {
-    review: "Akshay consistently demonstrated strong problem-solving and communication skills. His ability to quickly understand technical issues and provide clear, effective support greatly improved our customer satisfaction scores.",
+    review:
+      "Akshay consistently demonstrated strong problem-solving and communication skills. His ability to quickly understand technical issues and provide clear, effective support greatly improved our customer satisfaction scores.",
     imgPath: "/images/reallogo.png",
     logoPath: "/images/reallogo.png",
     title: "Customer Support Associate (Technical Support)",
-    date: "June 2025 - Present",
+    date: "June 2025 - Oct 2025",
     responsibilities: [
       "Assisted users with technical troubleshooting and guided them through product features.",
       "Collaborated with the dev team to report and document bugs for future updates.",
       "Built strong product understanding and communication skills applicable to technical roles",
     ],
   },
+  
+  
 ];
 
-export const expLogos = [
+const expLogos = [
   { name: "logo1", imgPath: "/images/logo1.png" },
   { name: "logo2", imgPath: "/images/logo2.png" },
   { name: "logo3", imgPath: "/images/logo3.png" },
 ];
 
 // ==================== CERTIFICATIONS ====================
-export const certifications = [
+// --- Removed 'export' from here ---
+const certifications = [
   {
-    imagePath: "/images/and.cer.png",
-    issuerImgPath: "/images/cour.png",
+    imagePath: "/images/and.cer.png", // Path to the big cert image
+    issuerImgPath: "/images/cour.png", // Path to the small logo
     title: "Android App Development",
     issuer: "Coursera",
   },
@@ -215,16 +257,31 @@ export const certifications = [
     title: "Ux/Ui Certificate",
     issuer: "Beep",
   },
-  {
+   {
     imagePath: "/images/aws.png",
     issuerImgPath: "/images/forage.png",
     title: "AWS APAC Solutions Architecture",
     issuer: "Forage",
   },
+  {
+    imagePath: "/images/javas.png",
+    issuerImgPath: "/images/hackr.png",
+    title: "Javascript Certificate",
+    issuer: "Hackrank",
+  },
+  {
+    imagePath: "/images/ai.png",
+    issuerImgPath: "/images/up.png",
+    title: "Introduction to Generative AI Certificate",
+    issuer: "Upgrad",
+  },
+  // ... add as many more as you like
 ];
 
 // ==================== SOCIAL IMAGES ====================
-export const socialImgs = [
+// constants.js
+
+ const socialImgs = [
   {
     name: "instagram",
     imgPath: "/images/insta.png",
@@ -246,3 +303,20 @@ export const socialImgs = [
     url: "https://www.linkedin.com/in/akshaypatra/",
   },
 ];
+
+
+// ==================== FINAL EXPORT ====================
+export {
+  words,
+  abilities,
+  
+  // counterItems removed
+  expCards,
+  expLogos,
+  certifications,
+  socialImgs,
+  techStackIcons,
+  techStackImgs,
+  navLinks,
+  projects,
+};
