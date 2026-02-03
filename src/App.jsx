@@ -5,7 +5,18 @@ import AboutSection from "./sections/AboutSection";
 import FeatureCards from "./sections/FeatureCards";
 import RecentProjects from "./components/RecentProjects";
 import Experience from "./sections/Experience";
-import TechStac
+import TechStack from "./sections/TechStack";
+import Testimonials from "./sections/Certifications";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+
+
+const LazyTestimonials = lazy(() => import("./sections/Certifications"));
+
+const AppContent = () => (
+  <>
+    <Navbar />
+    <Hero />
     <AboutSection />
     <FeatureCards />
     <RecentProjects />
