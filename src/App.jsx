@@ -13,6 +13,23 @@ import Footer from "./sections/Footer";
 
 const LazyTestimonials = lazy(() => import("./sections/Certifications"));
 
+const AppContent = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <AboutSection />
+    <FeatureCards />
+    <RecentProjects />
+    <Experience />
+    <TechStack />
+    <Suspense fallback={<div className="h-64" />}>
+      <Testimonials />
+    </Suspense>
+    <Contact />
+    <Footer />
+  </>
+);
+
 const App = memo(() => (
   <AppContent />
 ));
