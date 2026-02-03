@@ -1,29 +1,39 @@
-PS C:\Users\aksha\cht-core> npm test   
->> 
+import { memo, lazy, Suspense } from "react";
+import Navbar from "./components/NavBar";
+import Hero from "./sections/Hero";
+import AboutSection from "./sections/AboutSection";
+import FeatureCards from "./sections/FeatureCards";
+import RecentProjects from "./components/RecentProjects";
+import Experience from "./sections/Experience";
+import TechStack from "./sections/TechStack";
+import Testimonials from "./sections/Certifications";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
-> medic@5.0.0 test
-> npm run lint && npm run unit && npm run integration-api
+// Lazy load heavy components for better initial load time
+const LazyTestimonials = lazy(() => import("./sections/Certifications"));
 
+const AppContent = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <AboutSection />
+    <FeatureCards />
+    <RecentProjects />
+    <Experience />
+    <TechStack />
+    <Suspense fallback={<div className="h-64" />}>
+      <Testimonials />
+    </Suspense>
+    <Contact />
+    <Footer />
+  </>
+);
 
-> medic@5.0.0 lint
-> eslint --color --cache . && ./scripts/build/blank-link-check.sh && npm run lint-shell
+const App = memo(() => (
+  <AppContent />
+));
 
-node:internal/modules/cjs/loader:1404
-  throw err;
-  ^
+App.displayName = "App";
 
-Error: Cannot find module 'C:\Users\aksha\cht-core\node_modules\eslint\bin\eslint.js'
-    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
-    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
-    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
-    at Function._load (node:internal/modules/cjs/loader:1211:37)
-    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
-    at node:internal/main/run_main_module:36:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
-}
-
-Node.js v22.16.0
-PS C:\Users\aksha\cht-core> 
+export default App;
