@@ -10,7 +10,7 @@ import Testimonials from "./sections/Certifications";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 
-// Lazy load heavy components for better initial load time
+
 const LazyTestimonials = lazy(() => import("./sections/Certifications"));
 
 const AppContent = () => (
