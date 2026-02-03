@@ -1,32 +1,29 @@
-import { memo, lazy, Suspense } from "react";
-import Navbar from "./components/NavBar";
-import Hero from "./sections/Hero";
-import AboutSection from "./sections/AboutSection";
-impo
+PS C:\Users\aksha\cht-core> npm test   
+>> 
 
-const LazyTestimonials = lazy(() => import("./sections/Certifications"));
+> medic@5.0.0 test
+> npm run lint && npm run unit && npm run integration-api
 
-const AppContent = () => (
-  <>
-    <Navbar />
-    <Hero />
-    <AboutSection />
-    <FeatureCards />
-    <RecentProjects />
-    <Experience />
-    <TechStack />
-    <Suspense fallback={<div className="h-64" />}>
-      <Testimonials />
-    </Suspense>
-    <Contact />
-    <Footer />
-  </>
-);
 
-const App = memo(() => (
-  <AppContent />
-));
+> medic@5.0.0 lint
+> eslint --color --cache . && ./scripts/build/blank-link-check.sh && npm run lint-shell
 
-App.displayName = "App";
+node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
 
-export default App;
+Error: Cannot find module 'C:\Users\aksha\cht-core\node_modules\eslint\bin\eslint.js'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.16.0
+PS C:\Users\aksha\cht-core> 
