@@ -7,13 +7,7 @@ import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
 
 gsnd animate them in
-    // as the user scrolls to each card
-    invisible at the start
-        opacity: 0,
-        // Set the origin of the animation to the left side of the card
-        transformOrigin: "left left",
-        // Animate over 1 second
-        duration: 1,
+    // as
         // Use a power2 ease-in-out curve
         ease: "power2.inOut",
         // Trigger the animation when the card is 80% of the way down the screen
