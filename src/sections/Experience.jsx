@@ -6,11 +6,7 @@ import { expCards } from "../constants";
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Experience = () => {
-  useGSAP(() => {
-    // Loop through each timeline card and animate them in
+gsnd animate them in
     // as the user scrolls to each card
     invisible at the start
         opacity: 0,
