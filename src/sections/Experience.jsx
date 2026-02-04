@@ -8,18 +8,7 @@ import GlowCard from "../components/GlowCard";
 
 gsnd animate them in
     // as
-        // Use a power2 ease-in-out curve
-        ease: "power2.inOut",
-        // Trigger the animation when the card is 80% of the way down the screen
-        scrollTrigger: {
-          // The card is the trigger element
-          trigger: card,
-          // Trigger the animation when the card is 80% down the screen
-          start: "top 80%",
-        },
-      });
-    });
-
+        // Use a power2 ease-in-
     // Animate the timeline height as the user scrolls
     // from the top of the timeline to 70% down the screen
     // The timeline height should scale down from 1 to 0
