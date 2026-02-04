@@ -12,13 +12,7 @@ const Experience = () => {
   useGSAP(() => {
     // Loop through each timeline card and animate them in
     // as the user scrolls to each card
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
-      // Animate the card coming in from the left
-      // and fade in
-      gsap.from(card, {
-        // Move the card in from the left
-        xPercent: -100,
-        // Make the card invisible at the start
+    invisible at the start
         opacity: 0,
         // Set the origin of the animation to the left side of the card
         transformOrigin: "left left",
