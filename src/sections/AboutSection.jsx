@@ -44,7 +44,7 @@ const AboutSection = () => {
       >
         <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-[0_0_40px_#BFD8FF]">
           <img
-            src="/images/finalprofile.jpg"
+            src="/images/propic.png"
             alt="Profile"
             className="w-full h-full object-cover"
           />
