@@ -44,6 +44,50 @@ const abilities = [
 // --- Removed 'export' from here ---
 // constants.js
  const projects = [
+
+
+
+
+   {
+    {
+  id: 1,
+  title: "AppFlux — Decentralized App Distribution, Powered by GitHub",
+  des: "A production-grade decentralized app distribution platform that enables developers to deploy apps directly from GitHub into a community-driven store, eliminating traditional app store gatekeeping and long review cycles.",
+  img: "/images/appflux.png",
+  iconLists: [
+    "/images/nextjs.svg",
+    "/images/typescript.svg",
+    "/images/supabase.svg",
+    "/images/postgres.svg",
+    "/images/github.svg",
+    "/images/vercel.svg"
+  ],
+  github: "https://github.com/akshaypatra00/appflux",
+  type: "development",
+
+  problem:
+    "Traditional app stores impose centralized control, long approval cycles, and limited visibility for indie developers, making rapid iteration, beta distribution, and community-driven discovery difficult.",
+
+  solution:
+    "Built a decentralized, GitHub-powered app distribution platform that enables instant deployments, automated artifact detection, real-time analytics, and community-based discovery—giving developers full ownership over distribution and deployment.",
+
+  features: [
+    "One-click GitHub repository linking with OAuth support",
+    "Automated APK artifact detection from GitHub Releases",
+    "Real-time deployment status and build history tracking",
+    "Developer dashboard with analytics and conversion metrics",
+    "Community-driven app store with search and category filtering",
+    "Secure authentication with Google, GitHub, and email",
+    "Row Level Security (RLS) enforced across all database operations",
+    "Glassmorphism UI with high-performance animations",
+    "Scalable serverless architecture using Next.js App Router"
+  ],
+
+  metrics:
+    "End-to-end GitHub-to-store deployment pipeline, real-time analytics with sub-second updates, strict RLS enforcement for 100% user data isolation, production-grade auth and storage setup",
+
+  liveDemo: "https://appflux.in"
+}
    {
     id: 1,
     title: "Medicine Analyser App",
