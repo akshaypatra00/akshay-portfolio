@@ -105,7 +105,7 @@ const abilities = [
     "Clear medical disclaimers and safety-focused UX"
   ],
   metrics: "Supports 10+ structured medical categories per analysis, OCR accuracy improved with manual correction flow, 100% non-prescriptive AI responses enforced via prompt design",
-  liveDemo: ""
+  Dawnlode: "https://www.appflux.in/store/7b8936f5-9607-493b-acb6-de7ec668988b"
   },
 
    
@@ -134,7 +134,7 @@ const abilities = [
       "Offline mode - view and upload content without internet connection"
     ],
     metrics: "Built for 50+ beta families, 4.8★ rating, handles 10,000+ photos per family with 99.9% uptime",
-    liveDemo: ""
+    Dawnlode: "https://www.appflux.in/store/4954a7d3-0cd0-4a4c-903e-cd091abf9751"
   },
   {
     id: 2,
