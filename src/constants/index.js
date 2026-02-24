@@ -55,7 +55,7 @@ const abilities = [
       "/images/supabase.svg",
       "/images/postgres.svg",
       "/images/git.svg",
-      "/images/vercel.svg"
+      "/images/vercel_dark.svg"
     ],
     github: "https://github.com/akshaypatra00/appflux",
     type: "development",
